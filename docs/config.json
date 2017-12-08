@@ -1,4 +1,7 @@
 {
   "title": "Crafty",
-  "tagline": "The task runner that binds them all"
+  "tagline": "The task runner that binds them all",
+  "html": {
+    "theme": "swissquote"
+  }
 }

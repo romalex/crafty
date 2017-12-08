@@ -1,0 +1,1689 @@
+/*!
+ * Swissquote Documentation theme
+ * Based on work by Michael Rose - mademistakes.com
+ * Copyright 2017 Swissquote Bank
+ */
+
+/*
+   Variables
+   ========================================================================== */
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+/*
+   Typography
+   ========================================================================== */
+
+/* paragraph indention */
+
+/* true, false (default)*/
+
+/* system typefaces */
+
+/* type scale */
+
+/* ~39.056px*/
+
+/* ~31.248px*/
+
+/* ~25.008px*/
+
+/* ~20px*/
+
+/* ~16px*/
+
+/* ~12px*/
+
+/*
+   Colors
+   ========================================================================== */
+
+/* links */
+
+/*
+   Breakpoints
+   ========================================================================== */
+
+/* ~37em*/
+
+/* ~53em*/
+
+/*
+   Other
+   ========================================================================== */
+
+/*
+   Base
+   ========================================================================== */
+
+/* stylelint-disable */
+
+/* ==========================================================================
+   STYLE RESETS
+   ========================================================================== */
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    /* apply a natural box layout model to all elements */
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+@media (min-width: 850px) {
+
+    html {
+        font-size: 18px;
+    }
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* Remove margin */
+
+body {
+    margin: 0;
+}
+
+/* Selected elements */
+
+::-moz-selection {
+    color: #fff;
+    background: #000;
+}
+
+::selection {
+    color: #fff;
+    background: #000;
+}
+
+/* Display HTML5 elements in IE6-9 and FF3 */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+/* Display block in IE6-9 and FF3 */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/* Prevents modern browsers from displaying 'audio' without controls */
+
+audio:not([controls]) {
+    display: none;
+}
+
+/* Prevent sub and sup affecting line-height in all browsers */
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* img border in anchor's and image quality */
+
+img {
+    /* Responsive images (ensure images don't scale beyond their parents) */
+    max-width: 100%; /* part 1: Set a maximum relative to the parent*/
+    width: auto \9
+; /* IE7-8 need help adjusting responsive images*/
+    height: auto; /* part 2: Scale the height according to the width, otherwise you get stretching*/
+
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* Prevent max-width from affecting Google Maps */
+
+#map_canvas img,
+.google-maps img {
+    max-width: none;
+}
+
+/* Consistent form font size in all browsers, margin changes, misc */
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font-size: 100%;
+    vertical-align: middle;
+}
+
+button,
+input {
+    *overflow: visible; /* inner spacing ie IE6/7*/
+    line-height: normal; /* FF3/4 have !important on line-height in UA stylesheet*/
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* inner padding and border oddities in FF3/4*/
+    padding: 0;
+    border: 0;
+}
+
+button,
+html input[type="button"], // avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* corrects inability to style clickable `input` types in iOS*/
+    cursor: pointer; /* improves usability and consistency of cursor style between image-type `input` and others*/
+}
+
+label,
+select,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer; /* improves usability and consistency of cursor style between image-type `input` and others*/
+}
+
+input[type="search"] { /* Appearance in Safari/Chrome*/
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none; /* inner-padding issues in Chrome OSX, Safari 5*/
+}
+
+textarea {
+    overflow: auto; /* remove vertical scrollbar in IE6-9*/
+    vertical-align: top; /* readability and alignment cross-browser*/
+}
+
+/* stylelint-enable */
+
+/* ==========================================================================
+   BASE ELEMENTS
+   ========================================================================== */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #222;
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 2em 0 0.5em;
+    line-height: 1.2;
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 1.563em;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+h4 {
+    font-size: 0.75em;
+}
+
+h5 {
+    font-size: 0.75em;
+}
+
+h6 {
+    font-size: 0.75em;
+}
+
+small, .small {
+    font-size: 0.75em;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+u,
+ins {
+    text-decoration: none;
+    border-bottom: 1px solid #222;
+}
+
+u a, ins a {
+        color: inherit;
+    }
+
+del a {
+    color: inherit;
+}
+
+/* reduce orphans and widows when printing */
+
+p, pre, blockquote, ul, ol, dl, figure, table, fieldset {
+    orphans: 3;
+    widows: 3;
+}
+
+/* abbreviations */
+
+abbr[title],
+abbr[data-original-title] {
+    text-decoration: none;
+    cursor: help;
+    border-bottom: 1px dotted #222;
+}
+
+/* blockquotes */
+
+blockquote {
+    margin: 2em 1em 2em 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-style: italic;
+    border-left: 0.25em solid #7a8288;
+}
+
+blockquote cite {
+        font-style: italic
+    }
+
+blockquote cite:before {
+    content: "\2014";
+    padding-right: 5px;
+}
+
+/* links */
+
+a {
+    color: #fa5b35
+}
+
+a:focus {/*Default
+ */
+    outline: thin dotted #f89406;/*Webkit
+ */
+    outline: 5px auto #f89406;
+    outline-offset: -2px;
+}
+
+a:hover,
+    a:active {
+    outline: 0;
+}
+
+/* code */
+
+tt, code, kbd, samp, pre {
+    font-family: Monaco,Consolas,"Lucida Console",monospace;
+}
+
+pre {
+    overflow-x: auto; /* add scrollbars to wide code blocks*/
+}
+
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+    padding-top: 1.6px;
+    padding-top: 0.1rem;
+    padding-bottom: 1.6px;
+    padding-bottom: 0.1rem;
+    font-size: 0.75em;
+    background: #fafafa;
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .125);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .125)
+}
+
+p > code:before, p > code:after, a > code:before, a > code:after, li > code:before, li > code:after, figcaption > code:before, figcaption > code:after, td > code:before, td > code:after {
+    letter-spacing: -0.2em;
+    content: "\00a0";/*non-breaking space
+ */
+}
+
+/* horizontal rule */
+
+hr {
+    display: block;
+    margin: 1em 0;
+    border: 0;
+    border-top: 1px solid rgb(173, 173, 173);
+}
+
+/* lists */
+
+ul li,
+ol li {
+    margin-bottom: 0.5em;
+}
+
+li ul,
+li ol {
+    margin-top: 0.5em;
+}
+
+/*
+   Media and embeds
+   ========================================================================== */
+
+/* Figures and images */
+
+figure {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin: 2em 0;
+}
+
+figure img,
+    figure iframe,
+    figure .fluid-width-video-wrapper {
+        margin-bottom: 1em;
+    }
+
+figure img {
+        width: 100%;
+        border-radius: 4px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+figure > a {
+        display: block;
+    }
+
+@media (min-width: 600px) {
+
+    figure.half > a,
+        figure.half > img {
+        width: calc(50% - 0.5em);
+    }
+}
+
+figure.half figcaption {
+            width: 100%;
+}
+
+@media (min-width: 600px) {
+
+    figure.third > a,
+        figure.third > img {
+        width: calc(33.3333% - 0.5em);
+    }
+}
+
+figure.third figcaption {
+            width: 100%;
+}
+
+/* Figure captions */
+
+figcaption {
+    margin-bottom: 0.5em;
+    color: mix(#fff, #222, 25%);
+    font-family: -apple-system,".SFNSText-Regular","San Francisco","Roboto","Segoe UI","Helvetica Neue","Lucida Grande",Arial,sans-serif;
+    font-size: 0.75em;
+}
+
+figcaption a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid rgb(172, 172, 172);
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out
+    }
+
+figcaption a:hover {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+/* Fix IE9 SVG bug */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/*
+   Navigation lists
+   ========================================================================== */
+
+/**
+ * Removes margins, padding, and bullet points from navigation lists
+ *
+ * Example usage:
+ * <nav>
+ *    <ul>
+ *      <li><a href="#link-1">Link 1</a></li>
+ *      <li><a href="#link-2">Link 2</a></li>
+ *      <li><a href="#link-3">Link 3</a></li>
+ *    </ul>
+ *  </nav>
+ */
+
+nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+nav li {
+        list-style: none;
+    }
+
+nav a {
+        text-decoration: none;
+    }
+
+/* override white-space for nested lists */
+
+nav ul li,
+    nav ol li {
+        margin-bottom: 0;
+    }
+
+nav li ul,
+    nav li ol {
+        margin-top: 0;
+    }
+
+/*
+   Global animation transition
+   ========================================================================== */
+
+b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, a, tr, td, .highlight {
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+/* ==========================================================================
+   UTILITY CLASSES
+   ========================================================================== */
+
+/*
+   Icons
+   ========================================================================== */
+
+.icon {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1.1em;
+    line-height: 1;
+    position: relative;
+    top: -0.1em;
+    vertical-align: middle;
+}
+
+/*
+   Footnotes
+   ========================================================================== */
+
+.footnote {
+    color: mix(#fff, #7a8288, 25%);
+    text-decoration: none;
+}
+
+.footnotes {
+    color: mix(#fff, #7a8288, 25%);
+}
+
+.footnotes ol, .footnotes li, .footnotes p {
+        margin-bottom: 0;
+        font-size: 0.75em;
+    }
+
+a.reversefootnote {
+    color: #7a8288;
+    text-decoration: none
+}
+
+a.reversefootnote:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   TABLES
+   ========================================================================== */
+
+table {
+    margin-bottom: 1em;
+    width: 100%;
+    font-size: 0.75em;
+    border-collapse: collapse;
+    border: 1px solid rgb(172, 172, 172)
+}
+
+table + table {
+    margin-top: 1em;
+}
+
+thead {
+    background-color: rgb(173, 173, 173);
+    border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+th {
+    padding: 0.5em;
+    font-weight: bold;
+    text-align: left;
+    border-right: 1px solid rgb(172, 172, 172);
+}
+
+td {
+    padding: 0.5em;
+    border-bottom: 1px solid rgb(172, 172, 172);
+    border-right: 1px solid rgb(172, 172, 172);
+}
+
+tr, td, th {
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+/*
+   Navigation list
+   ========================================================================== */
+
+.nav__list {
+    margin-bottom: 1.5em;
+}
+
+.nav__list input[type="checkbox"],
+    .nav__list label {
+        display: none;
+    }
+
+@media (max-width: calc(850px - 1px)) {
+
+    .nav__list {
+        margin-bottom: 0;
+    }
+
+    .nav__list input[type="checkbox"] {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: calc(1.5rem - 18px);
+            left: 13px;
+
+            cursor: pointer;
+
+            opacity: 0; /* hide this */
+            z-index: 2; /* and place it over the hamburger */
+
+            -webkit-touch-callout: none;
+    }/** Just a quick hamburger
+ */
+
+    .nav__list label, .nav__list label:before, .nav__list label:after {
+        display: block;
+        width: 33px;
+        height: 4px;
+        position: absolute;
+        top: calc(24px - 2px);
+        top: calc(1.5rem - 2px);
+        left: 15px;
+        font-size: 0;
+        content: "";
+        background: #cdcdcd;
+        border-radius: 2px;
+        z-index: 1;
+        -webkit-transform-origin: 4px 0;
+            -ms-transform-origin: 4px 0;
+                transform-origin: 4px 0;
+        -webkit-transition: background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s,
+                    opacity 0.55s ease,
+                    -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        transition: background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s,
+                    opacity 0.55s ease,
+                    -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                    background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s,
+                    opacity 0.55s ease;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                    background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s,
+                    opacity 0.55s ease;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                    background 0.3s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s,
+                    opacity 0.55s ease,
+                    -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+
+    .nav__list label:before {
+        left: 0;
+        top: -10px;
+        -webkit-transform-origin: 0% 0%;
+            -ms-transform-origin: 0% 0%;
+                transform-origin: 0% 0%;
+    }
+
+    .nav__list label:after {
+        left: 0;
+        top: auto;
+        bottom: -10px;
+        -webkit-transform-origin: 0% 100%;
+            -ms-transform-origin: 0% 100%;
+                transform-origin: 0% 100%;
+    }
+            .nav__list input:checked ~ label {
+                background: transparent;
+                -webkit-transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1);
+                -o-transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1);
+                transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1);
+            }
+
+            .nav__list input:checked ~ label:before {
+                background: #232323;
+                -webkit-transform: rotate(45deg) translate(4px, -5px);
+                    -ms-transform: rotate(45deg) translate(4px, -5px);
+                        transform: rotate(45deg) translate(4px, -5px);
+            }
+
+            .nav__list input:checked ~ label:after {
+                background: #232323;
+                -webkit-transform: rotate(-45deg) translate(4px, 6px);
+                    -ms-transform: rotate(-45deg) translate(4px, 6px);
+                        transform: rotate(-45deg) translate(4px, 6px);
+            }
+
+    .nav__list ul {
+            margin-bottom: 1em;
+    }
+
+    .nav__list a {
+            display: block;
+            padding: 0.25em 0;
+    }
+}
+
+@media (max-width: calc(850px - 1px)) and (min-width: 850px) {
+
+    .nav__list a {
+        padding-top: 0.125em;
+        padding-bottom: 0.125em;
+    }
+}
+
+@media (max-width: calc(850px - 1px)) {
+
+    .nav__list a:hover {
+        text-decoration: underline;
+    }
+}
+
+.nav__list .nav__items {
+    margin: 0;
+}
+
+.nav__list .nav__items ul {
+        padding-left: 20px;
+    }
+
+.nav__list .nav__items .nav__sub-title.nolink,
+    .nav__list .nav__items a {
+        color: inherit;
+
+        display: block;
+        padding: 6.4px 4.8px 6.4px 16px;
+        padding: 0.4rem 0.3rem 0.4rem 1rem;
+        border-bottom: none;
+        color: #364149;
+        background: 0 0;
+        -o-text-overflow: ellipsis;
+           text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+    }
+
+.nav__list .nav__items a:hover,
+    .nav__list .nav__items .active {
+        color: #fa5b35;
+    }
+
+@media (max-width: (850px - 1px)) {
+
+    .nav__list .nav__items {
+        position: relative;
+        max-height: 0;
+        opacity: 0%;
+        overflow: hidden;
+        z-index: 10;
+        -webkit-transition: 0.3s ease-in-out;
+        -o-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+        -webkit-transform: translate(0, 10%);
+        -ms-transform: translate(0, 10%);
+        transform: translate(0, 10%);
+    }
+}
+
+@media (max-width: (850px - 1px)) {
+    .nav__list input:checked ~ .nav__items {
+        -webkit-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        max-height: 9999px; /* exaggerate max-height to accommodate tall lists*/
+        overflow: visible;
+        opacity: 1;
+        margin-top: 1em;
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+
+.nav__sub-title {
+
+}
+
+/*
+   Table of contents navigation
+   ========================================================================== */
+
+.toc {
+    color: rgb(91, 91, 91);
+    background-color: #fff;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .125);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .125);
+
+    margin-bottom: 1em;
+}
+
+@media (min-width: 850px) {
+
+    .toc {
+        position: relative;
+        float: right;
+        width: 40%;
+        max-width: 480px;
+        max-width: 30rem;
+        margin-left: 32px;
+        margin-left: 2rem;
+        z-index: 10;
+    }
+}
+
+.toc .toc__title {
+        margin: 0;
+        padding: 8px 16px;
+        padding: 0.5rem 1rem;
+        font-size: 0.75em;
+        font-weight: bold;
+
+        color: #fff;
+        font-size: 0.75em;
+        background: #7a8288;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+}
+
+.TableOfContents {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    font-size: 12.8px;
+    font-size: 0.8rem;
+}
+
+.TableOfContents a {
+        display: block;
+        padding: 8px 16px;
+        padding: 0.5rem 1rem;
+        color: rgb(91, 91, 91);
+        font-size: 0.75em;
+        font-weight: bold;
+        line-height: 1.5;
+        border-bottom: 1px solid rgb(173, 173, 173)
+    }
+
+.TableOfContents a:hover {
+    color: #000;
+    background: rgb(173, 173, 173);
+}
+
+.TableOfContents li ul > li a {
+        border-bottom: none;
+        padding: 4.8px 16px 4.8px 32px;
+        padding: 0.3rem 1rem 0.3rem 2rem;
+        font-weight: normal;
+    }
+
+/* hide sub sub links on small screens*/
+
+.TableOfContents li > ul li {
+        display: none;
+        list-style: circle;
+    }
+
+@media (min-width: 850px) {
+
+    .TableOfContents li > ul li {
+        display: block;
+    }
+}
+
+/* ==========================================================================
+   Syntax highlighting
+   ========================================================================== */
+
+div.highlighter-rouge,
+figure.highlight {
+    position: relative;
+    margin-bottom: 1em;
+    font-family: Monaco,Consolas,"Lucida Console",monospace;
+    font-size: 0.75em;
+    line-height: 1.8;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 4px;
+    background-color: #fafafa;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .125);
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .125);
+}
+
+div.highlighter-rouge .highlight, figure.highlight .highlight {
+        margin: 0;
+        padding: 1em;
+    }
+
+figure.highlight {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.highlight table {
+    font-size: 1em;
+    border: 0;
+}
+
+.highlight table td {
+        padding: 5px;
+        border: 0
+
+        /* line numbers*/
+    }
+
+.highlight table td.gutter {
+    padding-right: 1em;
+    color: rgb(172, 172, 172);
+}
+
+.highlight table pre {
+        margin: 0;
+    }
+
+.highlight pre {
+    width: 100%;
+}
+
+/*
+   Solarized Light
+   http://ethanschoonover.com/solarized
+
+   SOLARIZED HEX      ROLE
+   --------- -------- ------------------------------------------
+   base01    #586e75  body text / default code / primary content
+   base1     #93a1a1  comments / secondary content
+   base3     #fdf6e3  background
+   orange    #cb4b16  constants
+   red       #dc322f  regex, special keywords
+   blue      #22b3eb  reserved keywords
+   cyan      #2aa198  strings, numbers
+   green     #859900  operators, other keywords
+   ========================================================================== */
+
+.highlight .c {
+    color: #93a1a1
+}
+
+/* Comment */
+
+.highlight .err {
+    color: #586e75
+}
+
+/* Error */
+
+.highlight .g {
+    color: #586e75
+}
+
+/* Generic */
+
+.highlight .k {
+    color: #859900
+}
+
+/* Keyword */
+
+.highlight .l {
+    color: #586e75
+}
+
+/* Literal */
+
+.highlight .n {
+    color: #586e75
+}
+
+/* Name */
+
+.highlight .o {
+    color: #859900
+}
+
+/* Operator */
+
+.highlight .x {
+    color: #cb4b16
+}
+
+/* Other */
+
+.highlight .p {
+    color: #586e75
+}
+
+/* Punctuation */
+
+.highlight .cm {
+    color: #93a1a1
+}
+
+/* Comment.Multiline */
+
+.highlight .cp {
+    color: #859900
+}
+
+/* Comment.Preproc */
+
+.highlight .c1 {
+    color: #93a1a1
+}
+
+/* Comment.Single */
+
+.highlight .cs {
+    color: #859900
+}
+
+/* Comment.Special */
+
+.highlight .gd {
+    color: #2aa198
+}
+
+/* Generic.Deleted */
+
+.highlight .ge {
+    color: #586e75;
+    font-style: italic
+}
+
+/* Generic.Emph */
+
+.highlight .gr {
+    color: #dc322f
+}
+
+/* Generic.Error */
+
+.highlight .gh {
+    color: #cb4b16
+}
+
+/* Generic.Heading */
+
+.highlight .gi {
+    color: #859900
+}
+
+/* Generic.Inserted */
+
+.highlight .go {
+    color: #586e75
+}
+
+/* Generic.Output */
+
+.highlight .gp {
+    color: #586e75
+}
+
+/* Generic.Prompt */
+
+.highlight .gs {
+    color: #586e75;
+    font-weight: bold
+}
+
+/* Generic.Strong */
+
+.highlight .gu {
+    color: #cb4b16
+}
+
+/* Generic.Subheading */
+
+.highlight .gt {
+    color: #586e75
+}
+
+/* Generic.Traceback */
+
+.highlight .kc {
+    color: #cb4b16
+}
+
+/* Keyword.Constant */
+
+.highlight .kd {
+    color: #22b3eb
+}
+
+/* Keyword.Declaration */
+
+.highlight .kn {
+    color: #859900
+}
+
+/* Keyword.Namespace */
+
+.highlight .kp {
+    color: #859900
+}
+
+/* Keyword.Pseudo */
+
+.highlight .kr {
+    color: #22b3eb
+}
+
+/* Keyword.Reserved */
+
+.highlight .kt {
+    color: #dc322f
+}
+
+/* Keyword.Type */
+
+.highlight .ld {
+    color: #586e75
+}
+
+/* Literal.Date */
+
+.highlight .m {
+    color: #2aa198
+}
+
+/* Literal.Number */
+
+.highlight .s {
+    color: #2aa198
+}
+
+/* Literal.String */
+
+.highlight .na {
+    color: #586e75
+}
+
+/* Name.Attribute */
+
+.highlight .nb {
+    color: #b58900
+}
+
+/* Name.Builtin */
+
+.highlight .nc {
+    color: #22b3eb
+}
+
+/* Name.Class */
+
+.highlight .no {
+    color: #cb4b16
+}
+
+/* Name.Constant */
+
+.highlight .nd {
+    color: #22b3eb
+}
+
+/* Name.Decorator */
+
+.highlight .ni {
+    color: #cb4b16
+}
+
+/* Name.Entity */
+
+.highlight .ne {
+    color: #cb4b16
+}
+
+/* Name.Exception */
+
+.highlight .nf {
+    color: #22b3eb
+}
+
+/* Name.Function */
+
+.highlight .nl {
+    color: #586e75
+}
+
+/* Name.Label */
+
+.highlight .nn {
+    color: #586e75
+}
+
+/* Name.Namespace */
+
+.highlight .nx {
+    color: #586e75
+}
+
+/* Name.Other */
+
+.highlight .py {
+    color: #586e75
+}
+
+/* Name.Property */
+
+.highlight .nt {
+    color: #22b3eb
+}
+
+/* Name.Tag */
+
+.highlight .nv {
+    color: #22b3eb
+}
+
+/* Name.Variable */
+
+.highlight .ow {
+    color: #859900
+}
+
+/* Operator.Word */
+
+.highlight .w {
+    color: #586e75
+}
+
+/* Text.Whitespace */
+
+.highlight .mf {
+    color: #2aa198
+}
+
+/* Literal.Number.Float */
+
+.highlight .mh {
+    color: #2aa198
+}
+
+/* Literal.Number.Hex */
+
+.highlight .mi {
+    color: #2aa198
+}
+
+/* Literal.Number.Integer */
+
+.highlight .mo {
+    color: #2aa198
+}
+
+/* Literal.Number.Oct */
+
+.highlight .sb {
+    color: #93a1a1
+}
+
+/* Literal.String.Backtick */
+
+.highlight .sc {
+    color: #2aa198
+}
+
+/* Literal.String.Char */
+
+.highlight .sd {
+    color: #586e75
+}
+
+/* Literal.String.Doc */
+
+.highlight .s2 {
+    color: #2aa198
+}
+
+/* Literal.String.Double */
+
+.highlight .se {
+    color: #cb4b16
+}
+
+/* Literal.String.Escape */
+
+.highlight .sh {
+    color: #586e75
+}
+
+/* Literal.String.Heredoc */
+
+.highlight .si {
+    color: #2aa198
+}
+
+/* Literal.String.Interpol */
+
+.highlight .sx {
+    color: #2aa198
+}
+
+/* Literal.String.Other */
+
+.highlight .sr {
+    color: #dc322f
+}
+
+/* Literal.String.Regex */
+
+.highlight .s1 {
+    color: #2aa198
+}
+
+/* Literal.String.Single */
+
+.highlight .ss {
+    color: #2aa198
+}
+
+/* Literal.String.Symbol */
+
+.highlight .bp {
+    color: #22b3eb
+}
+
+/* Name.Builtin.Pseudo */
+
+.highlight .vc {
+    color: #22b3eb
+}
+
+/* Name.Variable.Class */
+
+.highlight .vg {
+    color: #22b3eb
+}
+
+/* Name.Variable.Global */
+
+.highlight .vi {
+    color: #22b3eb
+}
+
+/* Name.Variable.Instance */
+
+.highlight .il {
+    color: #2aa198
+}
+
+/* Literal.Number.Integer.Long */
+
+/*
+   Layout specific
+   ========================================================================== */
+
+/* ==========================================================================
+   SINGLE PAGE/POST
+   ========================================================================== */
+
+.Page {
+    margin-bottom: 32px;
+    margin-bottom: 2rem;
+}
+
+.Page__header > h1 {
+    margin-top: 0;
+    line-height: 48px;
+    line-height: 3rem
+}
+
+.Page__header > h1 + .page__meta {
+    margin-top: -0.5em;
+}
+
+.Page__header--separator {
+        height: 0.6em;
+    }
+
+.s-content h2 {
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid rgb(173, 173, 173);
+    }
+
+.s-content p, .s-content li, .s-content dl {
+        font-size: 1em;
+    }
+
+/* paragraph indents */
+
+.s-content p {
+        margin: 0 0 1.3em
+
+        /* sibling indentation*/
+    }
+
+.s-content a {
+        text-decoration: none
+    }
+
+.s-content a:hover {
+    text-decoration: underline;
+}
+
+.s-content a:hover img {
+                -webkit-box-shadow: 0 0 10px rgba(#000, 0.25);
+                        box-shadow: 0 0 10px rgba(#000, 0.25);
+}
+
+.s-content dt {
+        margin-top: 1em;
+        font-weight: bold;
+    }
+
+.s-content dd {
+        margin-left: 1em;
+        font-size: 0.75em;
+    }
+
+.s-content .small {
+        font-size: 0.75em;
+    }
+
+/* blockquote citations */
+
+.s-content blockquote + .small {
+        margin-top: -1.5em;
+        padding-left: 20px;
+        padding-left: 1.25rem;
+    }
+
+/*
+   Page meta
+   ========================================================================== */
+
+.page__meta {
+    margin-top: 2em;
+    color: mix(#fff, #7a8288, 25%);
+    font-size: 0.75em;
+}
+
+.page__meta p {
+        margin: 0;
+    }
+
+.page__meta a {
+        color: inherit;
+    }
+
+.page__meta-title {
+    margin-bottom: 10px;
+    font-size: 0.75em;
+    text-transform: uppercase;
+}
+
+/*
+   Comments
+   ========================================================================== */
+
+.page__comments-title {
+    margin-top: 32px;
+    margin-top: 2rem;
+    margin-bottom: 10px;
+    padding-top: 32px;
+    padding-top: 2rem;
+    font-size: 0.75em;
+    border-top: 1px solid rgb(173, 173, 173);
+    text-transform: uppercase;
+}
+
+.Pager {
+    padding-left: 0;
+    margin: 1em 0;
+    list-style: none;
+    text-align: center;
+    clear: both;
+    overflow: hidden;
+}
+
+.Pager li {
+        display: inline;
+    }
+
+.Pager li > a {
+            display: inline-block;
+            padding: 5px 14px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+        }
+
+.Pager li > a:hover,
+        .Pager li > a:focus {
+            text-decoration: none;
+            background-color: #eee;
+        }
+
+.Pager--next > a {
+        float: right;
+    }
+
+.Pager--prev > a {
+        float: left;
+    }
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+/*
+   Default
+   ========================================================================== */
+
+.Brand {
+    display: block;
+    font-size: 1.953em;
+    line-height: 48px;
+    line-height: 3rem;
+
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+
+    background: #fff;
+    border-bottom: 1px solid rgb(172, 172, 172);
+}
+
+.Columns__left {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    clear: both;
+    margin-bottom: 1em;
+}
+
+.Columns__left:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+@media (min-width: 850px) {
+
+    .Columns__left {
+        background-color: rgb(173, 173, 173);
+        border-right: 1px solid rgb(172, 172, 172);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+        overflow-y: auto;
+        width: 300px;
+        margin: 0;
+    }
+}
+
+.Columns__left {
+    font-size: 0.75em;
+}
+
+li.separator {
+    height: 1px;
+    border-top: 1px solid rgb(172, 172, 172);
+}
+
+.Columns__right {
+    padding: 0 16px;
+    padding: 0 1rem;
+}
+
+@media (min-width: 850px) {
+
+    .Columns__right {
+        padding: 0 32px;
+        padding: 0 2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 300px;
+        bottom: 0;
+        overflow-y: auto;
+    }
+}
+
+.copyright {
+    padding: 10px 15px;
+    font-size: 0.75em;
+}
+
+.copyright a {
+        display: inline !important;
+        padding: 0 !important;
+    }
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+
+/*
+   Hide the following elements on print
+   ========================================================================== */
+
+@media print {
+    .toc,
+    .page__share,
+    .ads,
+    .page__footer {
+        display: none;
+    }
+}
+
+/*# sourceMappingURL=theme.min.css.map */
