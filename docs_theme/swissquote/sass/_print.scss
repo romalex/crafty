@@ -7,10 +7,7 @@
    ========================================================================== */
 
 @media print {
-    .toc,
-    .page__share,
-    .ads,
-    .page__footer {
+    .TableOfContents {
         display: none;
     }
 }

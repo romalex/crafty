@@ -2,22 +2,81 @@
    NAVIGATION
    ========================================================================== */
 
-/*
-   Navigation list
-   ========================================================================== */
+.Nav {
+    margin: 0;
+    padding: 0;
 
-.nav__list {
-    margin-bottom: 1.5em;
-
-    input[type="checkbox"],
-    label {
-        display: none;
+    li {
+        list-style: none;
     }
 
-    @media (max-width: calc($large - 1px)) {
+    a {
+        text-decoration: none;
+    }
+
+    /* override white-space for nested lists */
+    ul li,
+    ol li {
+        margin-bottom: 0;
+    }
+
+    li ul,
+    li ol {
+        margin-top: 0;
+    }
+}
+
+.Nav .Nav__item {
+    margin: 0;
+
+    ul {
+        padding-left: 20px;
+    }
+
+    a {
+        color: inherit;
+
+        display: block;
+        padding: 0.4rem 0.3rem 0.4rem 1rem;
+        border-bottom: none;
+        background: 0 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+    }
+
+    a:hover,
+    .Nav__item--active {
+        color: var(--link-color);
+    }
+/*
+    @media (--viewport-small-end) {
+        position: relative;
+        max-height: 0;
+        opacity: 0%;
+        overflow: hidden;
+        z-index: 10;
+        transition: 0.3s ease-in-out;
+        transform: translate(0, 10%);
+    }*/
+}
+
+/* ==========================================================================
+   Collapsible menu
+   ========================================================================== */
+
+@media (--viewport-large) {
+    .Collapsible__trigger, .Collapsible__label {
+        display: none;
+    }
+}
+
+@media (--viewport-small-end) {
+    .Collapsible {
         margin-bottom: 0;
 
-        input[type="checkbox"] {
+        .Collapsible__trigger { // input[type="checkbox"]
             display: block;
             width: 40px;
             height: 32px;
@@ -37,7 +96,9 @@
          * Just a quick hamburger
          */
         label {
-            &, &:before, &:after {
+            &,
+            &:before,
+            &:after {
                 display: block;
                 width: 33px;
                 height: 4px;
@@ -74,7 +135,7 @@
             }
         }
 
-        input:checked {
+        .Collapsible__trigger:checked { // input
             ~ label {
                 background: transparent;
                 transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -99,7 +160,7 @@
             display: block;
             padding: 0.25em 0;
 
-            @media (min-width: $large) {
+            @media (--viewport-large) {
                 padding-top: 0.125em;
                 padding-bottom: 0.125em;
             }
@@ -109,66 +170,13 @@
             }
         }
     }
-}
 
-.nav__list .nav__items {
-    margin: 0;
-
-    ul {
-        padding-left: 20px;
-    }
-
-    .nav__sub-title.nolink,
-    a {
-        color: inherit;
-
-        display: block;
-        padding: 0.4rem 0.3rem 0.4rem 1rem;
-        border-bottom: none;
-        color: #364149;
-        background: 0 0;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-    }
-
-    a:hover,
-    .active {
-        color: $link-color;
-    }
-
-    @media (max-width: ($large - 1px)) {
-        position: relative;
-        max-height: 0;
-        opacity: 0%;
-        overflow: hidden;
-        z-index: 10;
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-        -webkit-transform: translate(0, 10%);
-        -ms-transform: translate(0, 10%);
-        transform: translate(0, 10%);
-    }
-}
-
-@media (max-width: ($large - 1px)) {
-    .nav__list input:checked ~ .nav__items {
-        -webkit-transition: 0.5s ease-in-out;
+    .Collapsible__trigger:checked ~ .Collapsible__content {
         transition: 0.5s ease-in-out;
         max-height: 9999px; /* exaggerate max-height to accommodate tall lists*/
         overflow: visible;
         opacity: 1;
         margin-top: 1em;
-        -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
         transform: translate(0, 0);
     }
 }
-
-.nav__sub-title {
-
-}
-
-
-
