@@ -21,10 +21,13 @@
             <div class="Links">
                 <?php if (!empty($params['html']['links'])) { ?>
                     <hr class=Separator />
+                    <ul class=Nav>
                     <?php foreach ($params['html']['links'] as $name => $url) { ?>
+                        <li class=Nav__item>
                         <a href="<?= $url ?>" target="_blank"><?= $name ?></a>
-                        <br />
+                        </li>   
                     <?php } ?>
+                    </ul>
                 <?php } ?>
 
                 <?php if (!empty($params['html']['twitter'])) { ?>
@@ -40,7 +43,7 @@
             </div>
             <hr class=Separator />
             <div class=Copyright>
-                ©Swissquote Powered by Daux
+                © 2017 Swissquote Bank SA. Powered by Daux.io.
             </div>
         </div>
     </aside>

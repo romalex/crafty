@@ -2,6 +2,11 @@
   "title": "Crafty",
   "tagline": "The task runner that binds them all",
   "html": {
-    "theme": "swissquote"
+    "theme": "swissquote",
+    "links": {
+      "Technical blog": "https://medium.com/swissquote-engineering",
+      "Swissquote": "https://swissquote.com/",
+      "GitHub": "http://github.com/swissquote/carnotzet"
+    }
   }
 }

@@ -48,11 +48,12 @@
     --code-background-color: #fafafa;
     --text-color: #222;
     --border-color: var(--lighter-gray);
-    --primary-color: #7a8288;
-    --warning-color: #f89406;
+
+    --primary-color: #fa5b35;
+    --primary-color-light: color(var(--primary-color) blend(#ddd 20%));
 
     /* links */
-    --link-color: #fa5b35;
+    --link-color: var(--primary-color);
     --link-color-hover: color(var(--link-color) blend(#000 15%));
 
     /*

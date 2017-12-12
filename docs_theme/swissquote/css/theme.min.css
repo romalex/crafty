@@ -368,7 +368,7 @@ blockquote {
     padding-left: 1em;
     padding-right: 1em;
     font-style: italic;
-    border-left: 0.25em solid #7a8288;
+    border-left: 0.25em solid #fa5b35;
 }
 
 blockquote cite {
@@ -388,9 +388,9 @@ a {
 
 a:focus {/*Default
  */
-    outline: thin dotted #f89406;/*Webkit
+    outline: thin dotted #fa5b35;/*Webkit
  */
-    outline: 5px auto #f89406;
+    outline: 2px auto #fa5b35;
     outline-offset: -2px;
 }
 
@@ -857,7 +857,7 @@ th {
         font-size: 0.75em;
         font-weight: bold;
         color: #fff;
-        background: #7a8288;
+        background: rgb(244, 117, 87);
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
 }

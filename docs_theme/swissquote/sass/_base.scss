@@ -124,9 +124,9 @@ a {
 
     &:focus {
         /* Default*/
-        outline: thin dotted var(--warning-color);
+        outline: thin dotted var(--primary-color);
         /* Webkit*/
-        outline: 5px auto var(--warning-color);
+        outline: 2px auto var(--primary-color);
         outline-offset: -2px;
     }
 
