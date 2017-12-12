@@ -620,63 +620,92 @@ th {
     padding: 0;
 }
 
-.Nav li {
-        list-style: none;
-    }
-
-.Nav a {
-        text-decoration: none;
-    }
-
-/* override white-space for nested lists */
-
-.Nav ul li,
-    .Nav ol li {
-        margin-bottom: 0;
-    }
-
-.Nav li ul,
-    .Nav li ol {
-        margin-top: 0;
-    }
-
-.Nav .Nav__item {
-    margin: 0;
-/*
-    @media (--viewport-small-end) {
+.Nav__arrow {
+        display: inline-block;
         position: relative;
-        max-height: 0;
-        opacity: 0%;
-        overflow: hidden;
-        z-index: 10;
-        transition: 0.3s ease-in-out;
-        transform: translate(0, 10%);
-    }*/
+        width: 16px;
+        margin-left: -16px
+    }
+
+.Nav__arrow:before {
+    position: absolute;
+    display: block;
+    content: "";
+    margin: -0.25em 0 0 -0.4em;
+    left: 50%;
+    top: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    border-right: 0.15em solid #7a8288;
+    border-top: 0.15em solid #7a8288;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
 }
 
-.Nav .Nav__item ul {
+.Nav__item {
+        display: block;
+        margin: 0;
+    }
+
+.Nav__item a {
+            color: inherit;
+            padding: 6.4px 4.8px 6.4px 16px;
+            padding: 0.4rem 0.3rem 0.4rem 1rem;
+            border-bottom: none;
+            background: 0 0;
+            -o-text-overflow: ellipsis;
+               text-overflow: ellipsis;
+            text-decoration: none;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            display: block;
+            margin: 0;
+            font-weight: 400;
+            font-size: 15px;
+            text-shadow: none;
+        }
+
+.Nav__item a:hover {
+            text-shadow: none;
+            background-color: rgb(189, 193, 196);
+        }
+
+.Nav .Nav {
+        display: none;
+        margin-left: 15px;
         padding-left: 20px;
     }
 
-.Nav .Nav__item a {
-        color: inherit;
+.Nav .Nav .Nav__item a {
+            margin: 0;
+            margin-left: -15px;
+            color: inherit;
+        }
 
-        display: block;
-        padding: 6.4px 4.8px 6.4px 16px;
-        padding: 0.4rem 0.3rem 0.4rem 1rem;
-        border-bottom: none;
-        background: 0 0;
-        -o-text-overflow: ellipsis;
-           text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-    }
+.Nav .Nav .Nav__item--active a {
+            color: #fa5b35;
+        }
 
-.Nav .Nav__item a:hover,
-    .Nav .Nav__item .Nav__item--active {
-        color: #fa5b35;
-    }
+.Nav__item--open > a,
+        .Nav__item--active > a {
+            background-color: rgb(215, 218, 219);
+        }
+
+.Nav__item--open > .Nav {
+            display: block;
+        }
+
+.Nav__item--open a > .Nav__arrow:before {
+            margin-left: -0.25em;
+            -webkit-transform: rotate(135deg);
+                -ms-transform: rotate(135deg);
+                    transform: rotate(135deg);
+        }
 
 /* ==========================================================================
    Collapsible menu

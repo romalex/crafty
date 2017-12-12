@@ -42,12 +42,13 @@
     --dark-gray: color(var(--gray) blend(#000 40%));
     //--darker-gray: color(var(--gray) blend(#000 60%));
     --light-gray: color(var(--gray) blend(#fff 50%));
-    --lighter-gray: color(var(--gray) blend(#fff 90%));
+    --lighter-gray: color(var(--gray) blend(#fff 70%));
+    --lightest-gray: color(var(--gray) blend(#fff 90%));
 
     --background-color: #fff;
     --code-background-color: #fafafa;
     --text-color: #222;
-    --border-color: var(--lighter-gray);
+    --border-color: var(--lightest-gray);
 
     --primary-color: #fa5b35;
     --primary-color-light: color(var(--primary-color) blend(#ddd 20%));
