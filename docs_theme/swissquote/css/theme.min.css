@@ -287,7 +287,7 @@ h6 {
         "Lucida Grande",
         Arial,
         sans-serif;
-    font-weight: bold;
+    font-weight: 300;
 }
 
 h1 {
@@ -1098,6 +1098,166 @@ pre[class*="language-"] {
 
 /* stylelint-enable */
 
+/* =================================================================
+Homepage
+==================================================================== */
+
+/* stylelint-disable selector-class-pattern*/
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 850px) {
+    .HomepageContent .container {
+        max-width: 1200px;
+    }
+}
+
+.container--inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* stylelint-enable selector-class-pattern*/
+
+.Homepage {
+    background-color: rgb(252, 140, 114);
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    overflow: hidden;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.HomepageTitle {
+    padding: 60px 0;
+}
+
+.HomepageTitle h2 {
+        width: 80%;
+        font-size: 30px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+.HomepageImage img {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+        height: auto;
+    }
+
+.HomepageButtons {
+    padding: 20px 0;
+    background-color: rgb(215, 218, 219);
+    text-align: center;
+}
+
+.HomepageButtons .Button {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+.HomepageButtons .Button--hero {
+        padding: 20px 30px;
+        border-radius: 0;
+        text-shadow: none;
+        opacity: 0.8;
+        margin: 0 10px;
+        text-transform: uppercase;
+        border: 5px solid #fa5b35;
+        font-weight: 700;
+    }
+
+@media (max-width: 849px) {
+
+    .HomepageButtons .Button--hero {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.HomepageButtons .Button--hero:hover {
+    opacity: 1;
+}
+
+.HomepageButtons .Button--hero.Button--secondary {
+    color: #fa5b35;
+}
+
+.HomepageButtons .Button--hero.Button--primary {
+    background-color: #fa5b35;
+    color: #fff;
+}
+
+.HomepageContent {
+    background-color: white;
+    padding: 40px 0;
+}
+
+.HomepageContent .TableOfContentsContainer {
+        float: none;
+        width: auto;
+        max-width: 100%;
+        margin: 0 32px;
+        margin: 0 2rem;
+    }
+
+.HomepageFooter {
+    background-color: rgb(215, 218, 219);
+    border: none;
+    overflow: hidden;
+}
+
+@media (max-width: 849px) {
+
+    .HomepageFooter {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .HomepageFooter .HomepageFooter__links {
+            padding-left: 0;
+            list-style-type: none;
+    }
+}
+
+@media (min-width: 850px) {
+
+    .HomepageFooter .HomepageFooter__links {
+            float: left;
+    }
+
+    .HomepageFooter .HomepageFooter__twitter {
+            float: right;
+    }
+}
+
+.HomepageFooter__links {
+        margin: 40px 0;
+}
+
+.HomepageFooter__links li a {
+            line-height: 32px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+.HomepageFooter__links li a:hover {
+            text-decoration: underline;
+        }
+
+.HomepageFooter__twitter {
+        margin: 40px 0;
+}
+
+.HomepageFooter .Twitter {
+        margin-bottom: 20px;
+}
+
 /*
    Layout specific
    ========================================================================== */
@@ -1199,7 +1359,8 @@ pre[class*="language-"] {
             padding: 5px 14px;
             background-color: #fff;
             border: 1px solid #ddd;
-            border-radius: 15px;
+            border-radius: 2em;
+            text-decoration: none;
         }
 
 .Pager li > a:hover,

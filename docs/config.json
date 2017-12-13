@@ -1,8 +1,11 @@
 {
   "title": "Crafty",
   "tagline": "The task runner that binds them all",
+  "author": "Swissquote Bank SA",
   "html": {
     "theme": "swissquote",
+    "repo": "swissquote/crafty",
+    "search": false,
     "links": {
       "Technical blog": "https://medium.com/swissquote-engineering",
       "Swissquote": "https://swissquote.com/",

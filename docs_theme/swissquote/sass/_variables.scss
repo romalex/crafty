@@ -52,6 +52,7 @@
 
     --primary-color: #fa5b35;
     --primary-color-light: color(var(--primary-color) blend(#ddd 20%));
+    --primary-color-lighter: color(var(--primary-color) blend(#fff 30%));
 
     /* links */
     --link-color: var(--primary-color);
@@ -68,5 +69,5 @@
 /*
  * Breakpoints
  * ===================================================================== */
-@custom-media --viewport-small-end (width < 850px);
+@custom-media --viewport-small (width < 850px);
 @custom-media --viewport-large (width >= 850px);
